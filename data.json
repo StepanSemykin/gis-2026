@@ -1,0 +1,453 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/1476450784",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "1",
+        "addr:street": "улица Коммассив",
+        "building": "house",
+        "building:levels": "2",
+        "id": "way/1476450784"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3295402,
+              53.5759023
+            ],
+            [
+              49.3295061,
+              53.5758011
+            ],
+            [
+              49.329788,
+              53.5757676
+            ],
+            [
+              49.3298221,
+              53.5758689
+            ],
+            [
+              49.3295402,
+              53.5759023
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450785",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "село Русская Борковка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "2А",
+        "addr:street": "12-я Садовая улица",
+        "building": "house",
+        "building:levels": "2",
+        "id": "way/1476450785"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3302603,
+              53.5758029
+            ],
+            [
+              49.3302698,
+              53.5757282
+            ],
+            [
+              49.330411,
+              53.5757345
+            ],
+            [
+              49.3304015,
+              53.5758092
+            ],
+            [
+              49.3302603,
+              53.5758029
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450786",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "13",
+        "addr:street": "12-я Садовая",
+        "building": "house",
+        "building:levels": "2",
+        "id": "way/1476450786"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3310508,
+              53.5755784
+            ],
+            [
+              49.3310777,
+              53.5755289
+            ],
+            [
+              49.3311834,
+              53.5755492
+            ],
+            [
+              49.3311565,
+              53.5755987
+            ],
+            [
+              49.3310508,
+              53.5755784
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450787",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "11",
+        "addr:street": "12-я Садовая улица",
+        "building": "house",
+        "building:levels": "1",
+        "id": "way/1476450787"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3310679,
+              53.5757514
+            ],
+            [
+              49.3309927,
+              53.5757375
+            ],
+            [
+              49.3310367,
+              53.5756536
+            ],
+            [
+              49.3311119,
+              53.5756675
+            ],
+            [
+              49.3310679,
+              53.5757514
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450788",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "15",
+        "addr:street": "12-я Садовая улица",
+        "building": "house",
+        "id": "way/1476450788"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3311951,
+              53.5757585
+            ],
+            [
+              49.3312337,
+              53.5756946
+            ],
+            [
+              49.3313637,
+              53.5757223
+            ],
+            [
+              49.3313251,
+              53.5757862
+            ],
+            [
+              49.3311951,
+              53.5757585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450789",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "село Русская Борковка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "5",
+        "addr:street": "12-я Садовая улица",
+        "building": "house",
+        "building:levels": "1",
+        "id": "way/1476450789"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3307534,
+              53.576126
+            ],
+            [
+              49.3307762,
+              53.5760864
+            ],
+            [
+              49.3308565,
+              53.5761028
+            ],
+            [
+              49.3308338,
+              53.5761423
+            ],
+            [
+              49.3307534,
+              53.576126
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450790",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "6",
+        "addr:street": "12-я Садовая улица",
+        "building": "house",
+        "building:levels": "2",
+        "id": "way/1476450790"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3308926,
+              53.5763622
+            ],
+            [
+              49.3308618,
+              53.5764045
+            ],
+            [
+              49.3307873,
+              53.5763854
+            ],
+            [
+              49.3308181,
+              53.5763431
+            ],
+            [
+              49.3308926,
+              53.5763622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450791",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "11А",
+        "addr:street": "улица Коммассив",
+        "building": "house",
+        "building:levels": "2",
+        "id": "way/1476450791"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3296927,
+              53.5764511
+            ],
+            [
+              49.3297098,
+              53.5765028
+            ],
+            [
+              49.3296041,
+              53.5765151
+            ],
+            [
+              49.329587,
+              53.5764634
+            ],
+            [
+              49.3296927,
+              53.5764511
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450792",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "17А",
+        "addr:street": "улица Коммассив",
+        "building": "house",
+        "id": "way/1476450792"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3292773,
+              53.5769115
+            ],
+            [
+              49.3292583,
+              53.5768464
+            ],
+            [
+              49.3293632,
+              53.5768357
+            ],
+            [
+              49.3293822,
+              53.5769007
+            ],
+            [
+              49.3292773,
+              53.5769115
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1476450793",
+      "properties": {
+        "timestamp": "2026-02-11T11:34:54Z",
+        "version": "1",
+        "changeset": "178402403",
+        "user": "Stepan_Semykin",
+        "uid": "23813532",
+        "addr:city": "сельское поселение Тимофеевка",
+        "addr:place": "НСТ Мелиоратор",
+        "addr:housenumber": "24А",
+        "addr:street": "улица Коммассив",
+        "building": "house",
+        "building:levels": "2",
+        "id": "way/1476450793"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              49.3300128,
+              53.5773398
+            ],
+            [
+              49.3299939,
+              53.5772417
+            ],
+            [
+              49.3301278,
+              53.5772326
+            ],
+            [
+              49.3301467,
+              53.5773308
+            ],
+            [
+              49.3300128,
+              53.5773398
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
