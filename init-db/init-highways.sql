@@ -1,14 +1,12 @@
-CREATE EXTENSION IF NOT EXISTS postgis;
-
 DROP TABLE IF EXISTS highways CASCADE;
 
 CREATE TABLE highways (
-    ogc_fid serial primary key,
-    id character varying,
+    id serial primary key,
+    ogc_fid integer,
     timestamp timestamp with time zone,
     name character varying,
     name_etymology_wikidata character varying,
-    geom geometry(MultiLineString, 4326) not null
+    geom geometry(MultiPolygon, 4326) not null
 );
 
 INSERT INTO highways (id, timestamp, name, name_etymology_wikidata, geom) VALUES
