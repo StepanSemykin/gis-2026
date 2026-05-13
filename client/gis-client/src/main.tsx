@@ -23,17 +23,26 @@ const SOURCE_COLORS: Record<string, { fill: string; stroke: string }> = {
   ml:  { fill: '#f97316', stroke: '#c2410c' },
 };
 
-function overtureStyle(feature: FeatureLike) {
+function buildingsStyle(feature: FeatureLike) {
   const type = feature.get('source_type') as string;
   const colors = SOURCE_COLORS[type] ?? { fill: '#94a3b8', stroke: '#475569' };
   return new Style({
-    fill:   new Fill({ color: colors.fill + 'bf' }),  
+    fill:   new Fill({ color: colors.fill + 'bf' }),
     stroke: new Stroke({ color: colors.stroke, width: 1 }),
   });
 }
 
+function highwaysStyle(feature: FeatureLike) {
+  const type = feature.get('source_type') as string;
+  const colors = SOURCE_COLORS[type] ?? { fill: '#94a3b8', stroke: '#475569' };
+  return new Style({
+    stroke: new Stroke({ color: colors.stroke, width: 3 }),
+  });
+}
+
 const GEOSERVER_WMS_URL = 'http://localhost:18080/geoserver/gis/wms';
-const OVERTURE_PATH = './overture.geojson';
+const OVERTURE_BUILDINGS_PATH = './overture_buildings.geojson';
+const OVERTURE_HIGHWAYS_PATH = './overture_highways.geojson';
 const HIGHWAYS_LAYER = 'highways';
 const BUILDINGS_LAYER = 'buildings'
 const BOUNDS = [49.326586, 53.579436, 49.33931, 53.5752];
@@ -77,18 +86,25 @@ function MapView() {
       });
     }
 
-    const overtureSource = new VectorSource();
-    const overtureLayer = new VectorLayer({ source: overtureSource, style: overtureStyle });
-
-    fetch(OVERTURE_PATH)
-      .then((r) => r.json())
-      .then((geojson) => {
-        const features = new GeoJSON().readFeatures(geojson, {
-          dataProjection: 'EPSG:4326',
-          featureProjection: 'EPSG:3857',
+    function loadGeoJSON(url: string, source: VectorSource) {
+      fetch(url)
+        .then((r) => r.json())
+        .then((geojson) => {
+          const features = new GeoJSON().readFeatures(geojson, {
+            dataProjection: 'EPSG:4326',
+            featureProjection: 'EPSG:3857',
+          });
+          source.addFeatures(features);
         });
-        overtureSource.addFeatures(features);
-      });
+    }
+
+    const buildingsSource = new VectorSource();
+    const buildingsLayer = new VectorLayer({ source: buildingsSource, style: buildingsStyle });
+    loadGeoJSON(OVERTURE_BUILDINGS_PATH, buildingsSource);
+
+    const highwaysSource = new VectorSource();
+    const highwaysLayer = new VectorLayer({ source: highwaysSource, style: highwaysStyle });
+    loadGeoJSON(OVERTURE_HIGHWAYS_PATH, highwaysSource);
 
     const map = new Map({
       target: mapRef.current,
@@ -96,7 +112,8 @@ function MapView() {
         new TileLayer({ source: new OSM() }),
         createWmsLayer(BUILDINGS_LAYER),
         createWmsLayer(HIGHWAYS_LAYER),
-        overtureLayer,
+        highwaysLayer,
+        buildingsLayer,
       ],
       view: new View({
         center: fromLonLat([

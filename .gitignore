@@ -7,3 +7,5 @@ geoserver_data/gwc/geowebcache_2026-04-01T102713.bak
 geoserver_data/logs/geoserver.log
 
 geoserver_data/tomcat_pass.txt
+
+conn.duckdb

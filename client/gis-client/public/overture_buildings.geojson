@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "overture",
+"name": "overture_buildings",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC::CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "id": "c9c1c598-4d2d-44b1-8914-acf1c4ce4f4d", "source_type": "osm", "name": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 49.3279024, 53.5745913 ], [ 49.3278849, 53.5745193 ], [ 49.3280064, 53.5745089 ], [ 49.3280239, 53.5745809 ], [ 49.3279024, 53.5745913 ] ] ] } },
