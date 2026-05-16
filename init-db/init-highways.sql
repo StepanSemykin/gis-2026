@@ -1,12 +1,12 @@
 DROP TABLE IF EXISTS highways CASCADE;
 
 CREATE TABLE highways (
-    id serial primary key,
-    ogc_fid integer,
+    ogc_fid serial primary key,
+    id character varying,
     timestamp timestamp with time zone,
     name character varying,
     name_etymology_wikidata character varying,
-    geom geometry(MultiPolygon, 4326) not null
+    geom geometry(MultiLineString, 4326) not null
 );
 
 INSERT INTO highways (id, timestamp, name, name_etymology_wikidata, geom) VALUES

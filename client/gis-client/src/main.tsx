@@ -10,50 +10,26 @@ import VectorSource from 'ol/source/Vector';
 import OSM from 'ol/source/OSM';
 import ImageWMS from 'ol/source/ImageWMS';
 import GeoJSON from 'ol/format/GeoJSON';
-import { Style, Fill, Stroke } from 'ol/style';
-import type { FeatureLike } from 'ol/Feature';
 import { fromLonLat } from 'ol/proj';
+import { stylefunction } from 'ol-mapbox-style';
 
 import 'ol/ol.css';
 import './style.css';
 
-const SOURCE_COLORS: Record<string, { fill: string; stroke: string }> = {
-  my:  { fill: '#22c55e', stroke: '#15803d' },
-  osm: { fill: '#3b82f6', stroke: '#1d4ed8' },
-  ml:  { fill: '#f97316', stroke: '#c2410c' },
-};
-
-function buildingsStyle(feature: FeatureLike) {
-  const type = feature.get('source_type') as string;
-  const colors = SOURCE_COLORS[type] ?? { fill: '#94a3b8', stroke: '#475569' };
-  return new Style({
-    fill:   new Fill({ color: colors.fill + 'bf' }),
-    stroke: new Stroke({ color: colors.stroke, width: 1 }),
-  });
-}
-
-function highwaysStyle(feature: FeatureLike) {
-  const type = feature.get('source_type') as string;
-  const colors = SOURCE_COLORS[type] ?? { fill: '#94a3b8', stroke: '#475569' };
-  return new Style({
-    stroke: new Stroke({ color: colors.stroke, width: 3 }),
-  });
-}
+import { BUILDINGS_STYLE, HIGHWAYS_STYLE } from './mapbox-style';
 
 const GEOSERVER_WMS_URL = 'http://localhost:18080/geoserver/gis/wms';
 const OVERTURE_BUILDINGS_PATH = './overture_buildings.geojson';
 const OVERTURE_HIGHWAYS_PATH = './overture_highways.geojson';
 const HIGHWAYS_LAYER = 'highways';
-const BUILDINGS_LAYER = 'buildings'
+const BUILDINGS_LAYER = 'buildings';
 const BOUNDS = [49.326586, 53.579436, 49.33931, 53.5752];
 const ZOOM = 16;
- 
 const LEGEND_ITEMS = [
   { type: 'my',  label: 'my — оцифровка' },
   { type: 'osm', label: 'osm — OSM' },
   { type: 'ml',  label: 'ml — автораспознавание' },
 ];
-
 
 function Legend() {
   return (
@@ -99,11 +75,13 @@ function MapView() {
     }
 
     const buildingsSource = new VectorSource();
-    const buildingsLayer = new VectorLayer({ source: buildingsSource, style: buildingsStyle });
+    const buildingsLayer = new VectorLayer({ source: buildingsSource });
+    stylefunction(buildingsLayer, BUILDINGS_STYLE, 'buildings');
     loadGeoJSON(OVERTURE_BUILDINGS_PATH, buildingsSource);
 
     const highwaysSource = new VectorSource();
-    const highwaysLayer = new VectorLayer({ source: highwaysSource, style: highwaysStyle });
+    const highwaysLayer = new VectorLayer({ source: highwaysSource });
+    stylefunction(highwaysLayer, HIGHWAYS_STYLE, 'highways');
     loadGeoJSON(OVERTURE_HIGHWAYS_PATH, highwaysSource);
 
     const map = new Map({
